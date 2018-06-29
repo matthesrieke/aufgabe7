@@ -10,8 +10,23 @@ public class TextAnalyzer {
     public TextAnalyzer() {
     }
 
+    /**
+     * finds the first longest word
+     * 
+     * @param text
+     * @return 
+     */
     public String findLongestWord(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String[] words = text.split(" ");
+        
+        String longest = "";
+        for (String word : words) {
+            if (word.length() > longest.length()) {
+                longest = word;
+            }
+        }
+        
+        return longest;
     }
 
 }
